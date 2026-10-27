@@ -237,6 +237,16 @@ client.focused_inactive #282c34 #21252b #abb2bf #282c34 #282c34
 client.unfocused        #1e222a #1e222a #5c6370 #1e222a #1e222a
 focus_follows_mouse yes
 
+## Screenshot keybinding
+# Capture selected region to clipboard ($mod + Shift + s)
+bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy
+
+# Capture selected region and save to file ($mod + p)
+bindsym $mod+p exec grim -g "$(slurp)" ~/Pictures/Screenshots/screenshot_$(date +'%Y%m%d_%H%M%S').png
+
+# Capture full screen to clipboard ($mod + Shift + p)
+bindsym $mod+Shift+p exec grim - | wl-copy
+
 ### Waybar configs
 # Use pkill first to ensure old instances are terminated before launching a new one
 # exec_always "pkill waybar; waybar"
