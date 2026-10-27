@@ -1,0 +1,8 @@
+# Ignore log files or dynamic caches
+*.log
+.DS_Store
+
+# Ignore potential private keys or local secrets if you create them later
+secrets/
+*.pem
+*.key
