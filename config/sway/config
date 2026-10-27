@@ -247,6 +247,9 @@ bindsym $mod+p exec grim -g "$(slurp)" ~/Pictures/Screenshots/screenshot_$(date 
 # Capture full screen to clipboard ($mod + Shift + p)
 bindsym $mod+Shift+p exec grim - | wl-copy
 
+# Night light
+exec_always pkill wlsunset; wlsunset -S 06:30 -s 18:00 -t 4800 -T 6500
+
 ### Waybar configs
 # Use pkill first to ensure old instances are terminated before launching a new one
 # exec_always "pkill waybar; waybar"
