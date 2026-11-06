@@ -25,6 +25,7 @@
         "backlight",
         "sway/language",
         "battery",
+        "custom/date",
         "clock",
         "tray"
     ],
@@ -105,10 +106,16 @@
         //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
         // }
     },
+    "custom/date": {
+        "format": " {:s}",
+        "exec": "date '+%a, %b %d'",
+        "interval": 3600,
+        "on-click": "flatpak run org.kde.merkuro.calendar || merkuro-calendar || org.kde.merkuro.calendar"
+    },
     "clock": {
-        // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format": " {:%H:%M}",
+        "interval": 60,
+        "tooltip": false
     },
     "cpu": {
         "format": "{usage}% ",
