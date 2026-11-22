@@ -239,7 +239,7 @@ focus_follows_mouse yes
 
 ## Screenshot keybinding
 # Capture selected region to clipboard ($mod + Shift + s)
-bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy
+bindsym $mod+Shift+s exec sh -c 'grim -g "$(slurp)" - | wl-copy -t image/png'
 
 # Capture selected region and save to file ($mod + p)
 bindsym $mod+p exec grim -g "$(slurp)" ~/Pictures/Screenshots/screenshot_$(date +'%Y%m%d_%H%M%S').png
