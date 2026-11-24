@@ -254,6 +254,10 @@ exec_always "pkill wlsunset; sleep 1 && wlsunset -S 06:30 -s 18:00 -t 4800 -T 65
 # Use pkill first to ensure old instances are terminated before launching a new one
 # exec_always "pkill waybar; waybar"
 
+## Wayscriber
+exec wayscriber --daemon
+bindsym $mod+Shift+d exec wayscriber --daemon-toggle
+
 # Bind waybar restart
 bindsym $mod+Shift+b exec "pkill waybar || waybar"
 
